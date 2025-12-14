@@ -72,30 +72,48 @@ export default function HeroSection() {
           transition={{ delay: 0.9 }}
         >
           {[
-            {
-              href: "https://github.com/developersajadur",
-              icon: "simple-icons:github",
-              label: "GitHub",
-              color: "hover:text-gray-900 dark:hover:text-white",
-            },
-            {
-              href: "https://www.linkedin.com/in/sajadurrahman",
-              icon: "skill-icons:linkedin",
-              label: "LinkedIn",
-              color: "hover:text-blue-600",
-            },
-            {
-              href: "mailto:itzmesojib@gmail.com",
-              icon: "material-icon-theme:email",
-              label: "Email",
-              color: "hover:text-red-500",
-            },
-            {
-              href: "https://wa.me/8801787448412",
-              icon: "mdi:whatsapp",
-              label: "WhatsApp",
-              color: "hover:text-green-600",
-            },
+          {
+    href: "https://github.com/developersajadur",
+    icon: "simple-icons:github",
+    label: "GitHub",
+    color: "hover:text-gray-900 dark:hover:text-white",
+  },
+  {
+    href: "https://www.linkedin.com/in/sajadurrahman",
+    icon: "skill-icons:linkedin",
+    label: "LinkedIn",
+    color: "hover:text-blue-600",
+  },
+  {
+    href: "mailto:itzmesojib@gmail.com",
+    icon: "material-icon-theme:email",
+    label: "Email",
+    color: "hover:text-red-500",
+  },
+  {
+    href: "https://wa.me/8801787448412",
+    icon: "mdi:whatsapp",
+    label: "WhatsApp",
+    color: "hover:text-green-600",
+  },
+  {
+    href: "https://discord.gg/developersajadur",
+    icon: "ic:baseline-discord",
+    label: "Discord",
+    color: "hover:text-indigo-500",
+  },
+  {
+    href: "https://web.facebook.com/sajadurrahman.dev",
+    icon: "mdi:facebook",
+    label: "Facebook",
+    color: "hover:text-blue-700",
+  },
+  {
+    href: "https://t.me/developersajadur",
+    icon: "mdi:telegram",
+    label: "Telegram",
+    color: "hover:text-sky-500",
+  },
           ].map((link) => (
             <motion.div key={link.label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
