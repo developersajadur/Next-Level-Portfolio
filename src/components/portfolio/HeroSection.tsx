@@ -8,7 +8,7 @@ import TypewriterRole from "./TypewriterRole";
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-[100dvh] flex items-center justify-center">
+    <div className="relative min-h-[100dvh] flex items-center justify-center" id="#home">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 dark:bg-blue-400/10 rounded-full blur-3xl" />

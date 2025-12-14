@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useTheme } from "@/components/ThemeProvider";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const NAV_ITEMS = ["Overview", "Stack", "Experience", "Projects", "Contact"];
 
@@ -18,6 +19,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between gap-4">
 
           {/* Logo */}
+          <Link href="#home" className="">
           <motion.div
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
@@ -25,6 +27,7 @@ export default function Navigation() {
           >
             <Image src="/logo.svg" alt="Logo" width={36} height={36} priority />
           </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
