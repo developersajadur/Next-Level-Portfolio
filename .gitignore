@@ -20,9 +20,18 @@
 # production
 /build
 
+node_modules
+.next
+.env
+.env.local
+dist
+build
+
+
 # misc
 .DS_Store
 *.pem
+
 
 # debug
 npm-debug.log*

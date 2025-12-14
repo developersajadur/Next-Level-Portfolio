@@ -1,4 +1,4 @@
-# 🚀 Muhammad Ramazan - Portfolio
+# 🚀 Md Sajadur Rahman - Portfolio
 
 A stunning, modern portfolio website built with cutting-edge technologies and beautiful animations inspired by Aceternity UI design principles.
 
@@ -68,105 +68,6 @@ A stunning, modern portfolio website built with cutting-edge technologies and be
 - **PostCSS** - CSS processing
 - **Autoprefixer** - CSS vendor prefixing
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18.0 or later
-- npm or yarn package manager
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/lightify97/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Run the development server**
-
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-## 🎨 Customization
-
-### **Personal Information**
-
-Update the following in `src/app/page.tsx`:
-
-- Name and title in the navigation and hero section
-- Contact information (email, phone, location)
-- Social media links (GitHub, LinkedIn, etc.)
-- About me description and background
-
-### **Projects**
-
-Modify the `projects` array in `src/components/portfolio/ProjectsSection.tsx`:
-
-```typescript
-{
-  title: "Your Project Title",
-  description: "Project description...",
-  image: "🎯", // Emoji or image URL
-  tech: ["React", "Node.js", "MongoDB"],
-  github: "https://github.com/username/repo",
-  live: "https://yourproject.com",
-  color: "from-blue-500 to-purple-500"
-}
-```
-
-### **Skills**
-
-Update skills in the skills section of `src/components/portfolio/TechStackSection.tsx`:
-
-```typescript
-{
-  category: "Frontend",
-  skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
-}
-```
-
-### **Experience**
-
-Modify the experience array in `src/components/portfolio/ExperienceSection.tsx`:
-
-```typescript
-{
-  role: "Your Role",
-  company: "Company Name",
-  period: "2023 - Present",
-  description: "Role description...",
-  achievements: ["Achievement 1", "Achievement 2"]
-}
-```
-
-### **Styling**
-
-- **Colors**: Update color schemes in `tailwind.config.js`
-- **Animations**: Customize animations in `src/app/globals.css`
-- **Components**: Modify components in the `src/components/` directory
 
 ## 📂 Project Structure
 
@@ -235,29 +136,15 @@ portfolio/
 - ✅ Edge (Latest)
 - ✅ Mobile browsers
 
-## 🔧 Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/lightify97/portfolio/issues).
 
 ## 👨‍💻 Author
 
-**Muhammad Ramazan**
+**Md Sajadur Rahman**
 
-- Portfolio: [https://mramazan.dev](https://mramazan.dev)
-- GitHub: [@lightify97](https://github.com/lightify97)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/m-ramazan)
-- Email: mramazan1@yahoo.com
+- Portfolio: [https://sajadurrahman.com](https://sajadurrahman.com)
+- GitHub: [@sajadurrahman](https://github.com/developersajadur)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sajadurrahman)
+- Email: itzmesojib@gmail.com
 
 ## 🙏 Acknowledgments
 
