@@ -1,6 +1,6 @@
 # 🚀 Md Sajadur Rahman - Portfolio
 
-A stunning, modern portfolio website built with cutting-edge technologies and beautiful animations inspired by Aceternity UI design principles.
+A stunning, modern portfolio website built with cutting-edge technologies and beautiful animations portfolio
 
 ![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-brightgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-15.3-black)
