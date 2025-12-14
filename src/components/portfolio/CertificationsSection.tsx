@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, cubicBezier } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -233,7 +233,7 @@ export default function CertificationsSection() {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: cubicBezier(0.25, 0.46, 0.45, 0.94),
       },
     },
   };
@@ -245,7 +245,7 @@ export default function CertificationsSection() {
       transition: {
         duration: 8,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: cubicBezier(0.25, 0.46, 0.45, 0.94),
       },
     },
   };

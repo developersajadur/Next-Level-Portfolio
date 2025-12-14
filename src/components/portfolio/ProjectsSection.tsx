@@ -1,79 +1,113 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 import Link from "next/link";
 import SectionHeader from "./SectionHeader";
 
 const projects = [
   {
-    title: "Checkersvip.com",
-    subtitle: "Professional Online Checkers Platform",
-    description: "A comprehensive multiplayer American checkers platform designed for competitive play with real-time communication capabilities. Currently undergoing official recognition process with the American Checkers Federation (ACF).",
+    title: "Next Event",
+    subtitle: "Full-Stack Event Management Platform",
+    description:
+      "Next Event is a secure event planning and management platform with role-based access, dynamic public and private event workflows, free and paid event handling, integrated payments, participant management, and admin moderation tools.",
+
     features: [
-      "Real-time multiplayer gameplay with WebSocket technology",
-      "Advanced drag-and-drop game mechanics using DnDKit",
-      "Live chat system with emoji support and moderation",
-      "Player ranking and tournament management system",
-      "Spectator mode with real-time game observation",
-      "Mobile-responsive design for cross-platform play",
-      "Game replay and analysis tools",
-      "Social features including friend lists and challenges"
+      "Role-based access control for admins organizers and participants",
+      "Public and private event creation with free and paid workflows",
+      "Event invitation system with send and receive functionality",
+      "Participant registration and management",
+      "Event reviews and feedback system",
+      "Meeting and event invitation emails via Nodemailer",
+      "Payment receipts and transactional email notifications",
+      "Admin moderation and event approval tools",
     ],
+
     deliverables: [
-      "Fully functional web application deployed on production",
-      "Real-time multiplayer game engine",
-      "User authentication and profile management",
-      "Admin dashboard for game moderation",
-      "Tournament management system",
-      "Mobile-optimized responsive interface",
-      "Integration with payment systems for premium features"
+      "Production-ready full-stack web application",
+      "Secure authentication and authorization system",
+      "Payment integration for paid events",
+      "Email notification and receipt system",
+      "Admin dashboard for event moderation",
+      "Responsive interface for desktop and mobile",
     ],
-    tech: ["Next.js", "NextUI", "Tailwind CSS", "DnDKit", "Fastify", "Redis", "Socket.io", "PostgreSQL", "Prisma", "JWT Authentication", "Stripe API"],
-    github: "https://github.com",
-    live: "https://checkersvip.com",
-    gradient: "from-blue-500 to-cyan-500",
+
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "Shadcn-ui",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma",
+      "JWT Authentication",
+      "SSLCommerz",
+      "Nodemailer",
+    ],
+
+    github: {
+      client: "https://github.com/developersajadur/Next-Event-Client-Side",
+      server: "https://github.com/developersajadur/Next-Event-Server-Side",
+    },
+
+    live: "https://next-event-pro.vercel.app",
+    gradient: "from-indigo-500 to-purple-500",
     status: "Live",
     category: "Web Application",
     highlight: "Featured",
-    timeline: "6 months",
-    clientType: "Gaming Industry"
+    timeline: "Project-based",
+    clientType: "Event Management Platform",
   },
   {
-    title: "AskRudy.ai",
-    subtitle: "AI-Powered Document Intelligence Platform",
-    description: "An advanced RAG-based AI chatbot that revolutionizes document interaction through multilingual translation and intelligent conversation capabilities. Features cutting-edge OpenAI multimodal technology for screenshot analysis and real-time text translation.",
+    title: "Next Store",
+    subtitle: "Full-Stack E-Commerce Website",
+    description:
+      "Next Store is a full-featured e-commerce platform offering secure user authentication, seamless product browsing, cart and checkout workflows, order management, secure payments, and an admin dashboard for managing products and users.",
+
     features: [
-      "RAG (Retrieval-Augmented Generation) architecture for accurate responses",
-      "Multi-format document support (PDF, DOCX, TXT, images)",
-      "OpenAI GPT-4 Vision integration for screenshot analysis",
-      "Real-time multilingual translation (50+ languages)",
-      "Intelligent document chunking and vector embeddings",
-      "Conversational AI with context-aware responses",
-      "Document highlighting and annotation tools",
-      "Export capabilities for translations and summaries",
-      "Collaborative workspace for team document analysis"
+      "Secure user authentication using JWT",
+      "Product browsing with search and filtering",
+      "Shopping cart and checkout system",
+      "Order placement and order history management",
+      "Secure payment workflow",
+      "Admin dashboard for product user and order management",
+      "Role-based access control for admin and users",
+      "Responsive UI optimized for all devices",
     ],
+
     deliverables: [
-      "Production-ready AI chatbot platform",
-      "Document processing pipeline with OCR capabilities",
-      "Multi-language translation engine",
-      "User dashboard with document management",
-      "Subscription management with Stripe integration",
-      "API documentation and integration guides",
-      "Mobile-responsive Progressive Web App",
-      "Analytics dashboard for usage tracking"
+      "Production-ready full-stack e-commerce application",
+      "Secure authentication and authorization system",
+      "Admin dashboard for platform management",
+      "Optimized checkout and order workflow",
+      "Mobile-responsive user interface",
     ],
-    tech: ["Next.js", "NextUI", "Vercel AI SDK", "React-PDF", "Firebase", "LangChain", "OpenAI GPT-4", "Pinecone", "Stripe", "Tesseract.js", "PDF.js", "Zustand"],
-    github: "https://github.com",
-    live: "https://askrudy.ai",
-    gradient: "from-purple-500 to-pink-500",
+
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "Redux",
+      "Tailwind CSS",
+      "ShadCN",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT Authentication",
+    ],
+
+    github: {
+      client: "https://github.com/developersajadur/Next-Store-Client-Side",
+      server: "https://github.com/developersajadur/Next-Store-Server-Side",
+    },
+
+    live: "https://next-store-pro.vercel.app/",
+    gradient: "from-emerald-500 to-teal-500",
     status: "Live",
-    category: "AI Platform",
+    category: "E-Commerce",
     highlight: "Featured",
-    timeline: "8 months",
-    clientType: "EdTech & Enterprise"
-  }
+    timeline: "Project-based",
+    clientType: "Retail / E-Commerce",
+  },
 ];
 
 export default function ProjectsSection() {
@@ -96,7 +130,7 @@ export default function ProjectsSection() {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: cubicBezier(0.25, 0.46, 0.45, 0.94),
       },
     },
   };
@@ -108,7 +142,7 @@ export default function ProjectsSection() {
       transition: {
         duration: 6,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -171,9 +205,10 @@ export default function ProjectsSection() {
               className="group"
             >
               <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl md:rounded-3xl border border-white/30 dark:border-gray-700/40 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-500 overflow-hidden shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl">
-
                 {/* Project Header with Gradient */}
-                <div className={`relative bg-gradient-to-br ${project.gradient} p-4 sm:p-6 md:p-8 lg:p-10`}>
+                <div
+                  className={`relative bg-gradient-to-br ${project.gradient} p-4 sm:p-6 md:p-8 lg:p-10`}
+                >
                   {/* Animated background pattern */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.3)_1px,transparent_1px)] bg-[length:20px_20px] md:bg-[length:30px_30px]" />
@@ -183,16 +218,46 @@ export default function ProjectsSection() {
                   <div className="hidden md:block absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
                     {[
                       { icon: "logos:react", pos: { top: "15%", left: "80%" } },
-                      { icon: "logos:nextjs-icon", pos: { top: "60%", right: "4%" } },
-                      { icon: "logos:typescript-icon", pos: { bottom: "20%", left: "75%" } },
-                      { icon: "logos:nodejs-icon", pos: { top: "25%", right: "15%" } },
-                      { icon: "logos:tailwindcss-icon", pos: { bottom: "30%", left: "85%" } },
-                      { icon: "logos:postgresql", pos: { top: "40%", right: "20%" } },
-                      { icon: "simple-icons:langchain", pos: { bottom: "10%", left: "70%" } },
-                      { icon: "logos:redis", pos: { top: "20%", right: "25%" } },
-                      { icon: "logos:socket-io", pos: { bottom: "25%", left: "90%" } },
-                      { icon: "logos:stripe", pos: { top: "30%", right: "30%" } },
-                      { icon: "logos:vercel-icon", pos: { bottom: "15%", left: "65%" } },
+                      {
+                        icon: "logos:nextjs-icon",
+                        pos: { top: "60%", right: "4%" },
+                      },
+                      {
+                        icon: "logos:typescript-icon",
+                        pos: { bottom: "20%", left: "75%" },
+                      },
+                      {
+                        icon: "logos:nodejs-icon",
+                        pos: { top: "25%", right: "15%" },
+                      },
+                      {
+                        icon: "logos:tailwindcss-icon",
+                        pos: { bottom: "30%", left: "85%" },
+                      },
+                      {
+                        icon: "logos:postgresql",
+                        pos: { top: "40%", right: "20%" },
+                      },
+                      {
+                        icon: "simple-icons:langchain",
+                        pos: { bottom: "10%", left: "70%" },
+                      },
+                      {
+                        icon: "logos:redis",
+                        pos: { top: "20%", right: "25%" },
+                      },
+                      {
+                        icon: "logos:socket-io",
+                        pos: { bottom: "25%", left: "90%" },
+                      },
+                      {
+                        icon: "logos:stripe",
+                        pos: { top: "30%", right: "30%" },
+                      },
+                      {
+                        icon: "logos:vercel-icon",
+                        pos: { bottom: "15%", left: "65%" },
+                      },
                     ].map((item, i) => (
                       <motion.div
                         key={i}
@@ -208,7 +273,12 @@ export default function ProjectsSection() {
                           ease: "easeInOut",
                         }}
                       >
-                        <Icon icon={item.icon} width={24} height={24} className="md:w-8 md:h-8" />
+                        <Icon
+                          icon={item.icon}
+                          width={24}
+                          height={24}
+                          className="md:w-8 md:h-8"
+                        />
                       </motion.div>
                     ))}
                   </div>
@@ -228,20 +298,33 @@ export default function ProjectsSection() {
                           className="px-2.5 py-1.5 md:px-4 md:py-2 bg-yellow-500/20 backdrop-blur-sm border border-yellow-400/30 text-yellow-200 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 md:gap-2"
                           whileHover={{ scale: 1.05 }}
                         >
-                          <Icon icon="solar:star-bold" width={12} height={12} className="md:w-4 md:h-4" />
-                          <span className="hidden sm:inline">{project.highlight}</span>
+                          <Icon
+                            icon="solar:star-bold"
+                            width={12}
+                            height={12}
+                            className="md:w-4 md:h-4"
+                          />
+                          <span className="hidden sm:inline">
+                            {project.highlight}
+                          </span>
                         </motion.span>
                       )}
 
                       <motion.span
-                        className={`px-2.5 py-1.5 md:px-4 md:py-2 backdrop-blur-sm rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 md:gap-2 ${project.status === 'Live'
-                          ? 'bg-green-500/20 text-green-200 border border-green-400/30'
-                          : 'bg-orange-500/20 text-orange-200 border border-orange-400/30'
-                          }`}
+                        className={`px-2.5 py-1.5 md:px-4 md:py-2 backdrop-blur-sm rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 md:gap-2 ${
+                          project.status === "Live"
+                            ? "bg-green-500/20 text-green-200 border border-green-400/30"
+                            : "bg-orange-500/20 text-orange-200 border border-orange-400/30"
+                        }`}
                         whileHover={{ scale: 1.05 }}
                       >
-                        <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${project.status === 'Live' ? 'bg-green-400' : 'bg-orange-400'
-                          } animate-pulse`} />
+                        <div
+                          className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${
+                            project.status === "Live"
+                              ? "bg-green-400"
+                              : "bg-orange-400"
+                          } animate-pulse`}
+                        />
                         {project.status}
                       </motion.span>
 
@@ -270,18 +353,40 @@ export default function ProjectsSection() {
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                       <Link
-                        href={project.github}
+                        href={project.github.client}
                         className="flex items-center justify-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg md:rounded-xl hover:bg-white/30 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl active:scale-95"
                       >
-                        <Icon icon="solar:code-bold" width={18} height={18} className="md:w-5 md:h-5" />
-                        <span>View Repository</span>
+                        <Icon
+                          icon="solar:code-bold"
+                          width={18}
+                          height={18}
+                          className="md:w-5 md:h-5"
+                        />
+                        <span>View Frontend Repository</span>
+                      </Link>
+                      <Link
+                        href={project.github.server}
+                        className="flex items-center justify-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg md:rounded-xl hover:bg-white/30 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl active:scale-95"
+                      >
+                        <Icon
+                          icon="solar:code-bold"
+                          width={18}
+                          height={18}
+                          className="md:w-5 md:h-5"
+                        />
+                        <span>View Backend Repository</span>
                       </Link>
 
                       <Link
                         href={project.live}
                         className="flex items-center justify-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-white text-gray-900 rounded-lg md:rounded-xl hover:bg-gray-100 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl active:scale-95"
                       >
-                        <Icon icon="solar:arrow-up-outline" width={18} height={18} className="md:w-5 md:h-5" />
+                        <Icon
+                          icon="solar:arrow-up-outline"
+                          width={18}
+                          height={18}
+                          className="md:w-5 md:h-5"
+                        />
                         <span>Live Demo</span>
                       </Link>
                     </div>
@@ -291,12 +396,14 @@ export default function ProjectsSection() {
                 {/* Project Details Content */}
                 <div className="p-4 sm:p-6 md:p-8 lg:p-10">
                   <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
-
                     {/* Features Section */}
                     <div>
                       <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
                         <div className="p-1.5 md:p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg md:rounded-xl">
-                          <Icon icon="solar:settings-bold" className="text-white w-[18px] h-[18px] md:w-6 md:h-6" />
+                          <Icon
+                            icon="solar:settings-bold"
+                            className="text-white w-[18px] h-[18px] md:w-6 md:h-6"
+                          />
                         </div>
                         <span>Key Features</span>
                       </h4>
@@ -313,7 +420,9 @@ export default function ProjectsSection() {
                               icon="solar:check-circle-bold"
                               className="text-green-500 mt-0.5 flex-shrink-0 w-4 h-4 md:w-5 md:h-5"
                             />
-                            <span className="text-sm md:text-base leading-relaxed">{feature}</span>
+                            <span className="text-sm md:text-base leading-relaxed">
+                              {feature}
+                            </span>
                           </motion.li>
                         ))}
                       </ul>
@@ -323,26 +432,33 @@ export default function ProjectsSection() {
                     <div className="mt-6 lg:mt-0">
                       <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
                         <div className="p-1.5 md:p-2 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg md:rounded-xl">
-                          <Icon icon="solar:delivery-bold" className="text-white w-[18px] h-[18px] md:w-6 md:h-6" />
+                          <Icon
+                            icon="solar:delivery-bold"
+                            className="text-white w-[18px] h-[18px] md:w-6 md:h-6"
+                          />
                         </div>
                         <span>Deliverables</span>
                       </h4>
                       <ul className="space-y-2.5 md:space-y-3">
-                        {project.deliverables.map((deliverable, deliverableIndex) => (
-                          <motion.li
-                            key={deliverableIndex}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: deliverableIndex * 0.1 }}
-                            className="flex items-start gap-2.5 md:gap-3 text-gray-700 dark:text-gray-300"
-                          >
-                            <Icon
-                              icon="solar:box-bold"
-                              className="text-blue-500 mt-0.5 flex-shrink-0 w-4 h-4 md:w-5 md:h-5"
-                            />
-                            <span className="text-sm md:text-base leading-relaxed">{deliverable}</span>
-                          </motion.li>
-                        ))}
+                        {project.deliverables.map(
+                          (deliverable, deliverableIndex) => (
+                            <motion.li
+                              key={deliverableIndex}
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ delay: deliverableIndex * 0.1 }}
+                              className="flex items-start gap-2.5 md:gap-3 text-gray-700 dark:text-gray-300"
+                            >
+                              <Icon
+                                icon="solar:box-bold"
+                                className="text-blue-500 mt-0.5 flex-shrink-0 w-4 h-4 md:w-5 md:h-5"
+                              />
+                              <span className="text-sm md:text-base leading-relaxed">
+                                {deliverable}
+                              </span>
+                            </motion.li>
+                          )
+                        )}
                       </ul>
                     </div>
                   </div>
@@ -351,7 +467,10 @@ export default function ProjectsSection() {
                   <div className="mt-6 md:mt-8 lg:mt-12 pt-6 md:pt-8 border-t border-gray-200/50 dark:border-gray-700/50">
                     <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
                       <div className="p-1.5 md:p-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg md:rounded-xl">
-                        <Icon icon="solar:code-bold" className="text-white w-[18px] h-[18px] md:w-6 md:h-6" />
+                        <Icon
+                          icon="solar:code-bold"
+                          className="text-white w-[18px] h-[18px] md:w-6 md:h-6"
+                        />
                       </div>
                       <span>Technology Stack</span>
                     </h4>
@@ -382,17 +501,18 @@ export default function ProjectsSection() {
           variants={itemVariants}
           className="text-center mt-12 md:mt-16 lg:mt-20 px-4 mb-12"
         >
-          <Link
-            href="#contact"
-          >
-
+          <Link href="#contact">
             <motion.div
               className="inline-flex items-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-blue-500/20 dark:border-purple-500/20 rounded-xl md:rounded-2xl"
               whileHover={{ scale: 1.05 }}
             >
-              <Icon icon="solar:programming-bold" className="text-blue-500 dark:text-purple-400 w-5 h-5 md:w-6 md:h-6" />
+              <Icon
+                icon="solar:programming-bold"
+                className="text-blue-500 dark:text-purple-400 w-5 h-5 md:w-6 md:h-6"
+              />
               <span className="text-gray-700 dark:text-gray-300 font-medium text-sm md:text-base text-center">
-                Interested in working together? Let&apos;s create something amazing!
+                Interested in working together? Let&apos;s create something
+                amazing!
               </span>
             </motion.div>
           </Link>
@@ -400,4 +520,4 @@ export default function ProjectsSection() {
       </motion.div>
     </motion.section>
   );
-} 
+}

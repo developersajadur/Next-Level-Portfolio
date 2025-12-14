@@ -6,36 +6,36 @@ import SectionHeader from "./SectionHeader";
 
 const experience = [
   {
-    role: "Software Developer",
-    company: "Upwork",
-    period: "January 2020 — Present",
-    type: "Freelance",
-    companyIcon: "fa6-brands:square-upwork",
+    role: "Web Developer",
+    company: "Velocity Digital Inc.",
+    period: "Jan 2025 – Nov 2025",
+    type: "Remote",
+    location: "Bangkok, Thailand",
+    companyIcon: "solar:code-bold",
     companyColor: "from-green-500 to-green-600",
-    description: "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations (AWS, GCP).",
-    achievements: [
-      "Achieved Top-Rated status with a 91% job success score",
-      "Completed 10+ projects focusing on scalable solutions",
-      "Consistently praised for skillfulness, quick learning, and strong communication",
-      "Earned repeated engagements through reliability and expertise"
+    description: "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations.",
+    contributions: [
+      "Maintained 5+ full-stack sites, improving page load speed by memory optimizations",
+      "Developed responsive e-commerce sites using Next.js, Express.js, MongoDB, and PostgreSQL with SEO-friendly structure",
+      "Built responsive features following modern UI/UX principles, increasing mobile conversions by 20%"
     ],
-    technologies: ["JavaScript", "Python", "Node.js", "AWS", "GCP", "OpenAI API", "LangChain"]
+    technologies: ["Typescript", "Node.js", "Express", "React", "Next.js", "OpenAI API", "MongoDB", "PostgreSQL", "AWS", "Docker"]
   },
   {
-    role: "HIMS Master Trainer / PACS Specialist",
-    company: "Public Health Organization, Islamabad",
-    period: "July 2019 — Present",
-    type: "Full-time",
+    role: "Junior Web Developer And Instructor",
+    company: "It Vanilla",
+    period: "Jul 2024 – Dec 2024",
+    type: "On-Site",
+      location: "Dinajpur, Bangladesh",
     companyColor: "from-blue-500 to-blue-600",
     companyIcon: "mdi:hospital-building",
-    description: "Spearheaded organizational transformation from paper-based manual systems to completely integrated HIMS and PACS (Picture Archiving and Communication System).",
-    achievements: [
-      "Led integration of 45+ radiology machines (CT, MRI, X-Ray, Ultrasound)",
-      "Ensured active monitoring for integration issues",
-      "Acted as master trainer and led support team",
-      "Communicated issues and requirements to backend teams"
+    description: "Built responsive WordPress websites Handled ongoing maintenance security and performance Mentored students in web development and WordPress",
+    contributions: [
+      "Designed and developed 50+ responsive client websites using WordPress",
+      "Delivered ongoing maintenance and updates to ensure site performance, security, and reliability",
+      "Mentored 25+ students in web development and WordPress best practices",
     ],
-    technologies: ["HIMS", "PACS", "System Integration", "Healthcare IT", "Training & Support"]
+    technologies: ["Javascript", "Tailwind CSS", "Wordpress", "Elementor", "Payment Gateway Integration", "SEO Basics"]
   }
 ];
 
@@ -58,7 +58,7 @@ export default function ExperienceSection() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -69,7 +69,7 @@ export default function ExperienceSection() {
       scale: 1,
       rotate: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 200,
         damping: 15,
         delay: 0.3,
@@ -165,7 +165,9 @@ export default function ExperienceSection() {
                       className="text-lg md:text-xl text-blue-600 dark:text-blue-400 font-semibold"
                     >
                       {exp.company}
+
                     </motion.p>
+                       <span>{exp.location}</span>
                   </div>
 
                   {/* Description */}
@@ -187,11 +189,11 @@ export default function ExperienceSection() {
                   >
                     <h4 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-200 flex items-center gap-2">
                       <Icon icon="solar:cup-star-bold" className="text-amber-500" width={22} height={22} />
-                      Key Achievements
+                      Professional Impact & Contributions
                     </h4>
 
                     <div className="space-y-2 md:space-y-3">
-                      {exp.achievements.map((achievement, achIndex) => (
+                      {exp.contributions.map((contribution, achIndex) => (
                         <motion.div
                           key={achIndex}
                           initial={{ opacity: 0, x: -20 }}
@@ -203,7 +205,7 @@ export default function ExperienceSection() {
                             <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full" />
                           </div>
                           <span className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
-                            {achievement}
+                            {contribution}
                           </span>
                         </motion.div>
                       ))}
@@ -266,7 +268,7 @@ export default function ExperienceSection() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50/50 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/10 border border-blue-200/30 dark:border-blue-800/20 hover:border-blue-300/50 dark:hover:border-blue-600/30 transition-all duration-500"
             >
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">5+</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">1.5+</div>
               <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Years Experience</div>
             </motion.div>
 

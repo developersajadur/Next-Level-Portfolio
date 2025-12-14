@@ -8,15 +8,14 @@ export default function TypewriterRole() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const roles = [
-    "Full Stack Developer",
-    "Software Engineer",
-    "Systems Designer",
-    "AI Enthusiast"
-  ];
-
   // Typewriter effect
   useEffect(() => {
+    const roles = [
+      "Full Stack Developer",
+      "Software Engineer",
+      "Backend Developer",
+      "AI Enthusiast"
+    ];
     const currentRole = roles[currentRoleIndex];
     const timeout = setTimeout(() => {
       if (!isDeleting) {
@@ -36,7 +35,7 @@ export default function TypewriterRole() {
     }, isDeleting ? 50 : 120);
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRoleIndex, roles]);
+  }, [displayText, isDeleting, currentRoleIndex]);
 
   return (
     <motion.div

@@ -2,7 +2,6 @@
 
 import {
   Background,
-  CertificationsSection,
   ContactSection,
   ExperienceSection,
   Footer,
@@ -11,7 +10,6 @@ import {
   OverviewSection,
   ProjectsSection,
   TechStackSection,
-  TestimonialsSection
 } from "@/components/portfolio";
 
 export default function Portfolio() {
@@ -40,10 +38,10 @@ export default function Portfolio() {
         <ProjectsSection />
 
         {/* Testimonials Section */}
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
 
         {/* Certifications Section */}
-        <CertificationsSection />
+        {/* <CertificationsSection /> */}
 
         {/* Contact Section */}
         <ContactSection />

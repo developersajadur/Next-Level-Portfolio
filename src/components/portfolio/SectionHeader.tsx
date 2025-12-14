@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 
 interface SectionHeaderProps {
   tagText: string;
@@ -28,7 +28,7 @@ export default function SectionHeader({
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: cubicBezier(0.25, 0.46, 0.45, 0.94),
       },
     },
   };

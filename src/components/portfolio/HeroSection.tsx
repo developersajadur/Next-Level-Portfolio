@@ -46,7 +46,7 @@ export default function HeroSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent z-10">
-            Muhammad Ramazan
+            Md Sajadur Rahman
           </span>
         </motion.h1>
 
@@ -71,10 +71,49 @@ export default function HeroSection() {
           transition={{ delay: 1.0 }}
         >
           {[
-            { href: "https://github.com/lightify97", icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
-            { href: "https://linkedin.com/in/m-ramazan", icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
-            { href: "mailto:lightify6@gmail.com", icon: "material-icon-theme:email", label: "Email", color: "hover:text-green-600" }
-          ].map((link) => (
+  {
+    href: "https://github.com/developersajadur",
+    icon: "simple-icons:github",
+    label: "GitHub",
+    color: "hover:text-gray-900 dark:hover:text-white"
+  },
+  {
+    href: "https://www.linkedin.com/in/sajadurrahman",
+    icon: "skill-icons:linkedin",
+    label: "LinkedIn",
+    color: "hover:text-blue-600"
+  },
+  {
+    href: "mailto:itzmesojib@gmail.com",
+    icon: "material-icon-theme:email",
+    label: "Email",
+    color: "hover:text-red-500"
+  },
+  {
+    href: "https://wa.me/+8801787448412", // <-- Replace with your WhatsApp number
+    icon: "mdi:whatsapp",
+    label: "WhatsApp",
+    color: " hover:text-green-600"
+  },
+  {
+    href: "https://discord.gg/developersajadur", // <-- Replace with your Discord server or profile link
+    icon: "ic:baseline-discord",
+    label: "Discord",
+    color: "hover:text-indigo-500"
+  },
+  {
+    href: "https://web.facebook.com/sajadurrahman.dev", // <-- Replace with your Facebook profile link
+    icon: "mdi:facebook",
+    label: "Facebook",
+    color: "hover:text-blue-700"
+  },
+  {
+    href: "https://t.me/developersajadur", // <-- Replace with your Telegram username
+    icon: "mdi:telegram",
+    label: "Telegram",
+    color: "hover:text-sky-500"
+  }
+].map((link) => (
             <motion.div key={link.label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href={link.href}

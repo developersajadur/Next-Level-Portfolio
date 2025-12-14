@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { easeInOut } from "framer-motion";
 
 export default function Background() {
   const [isMobile, setIsMobile] = useState(false);
@@ -21,8 +22,8 @@ export default function Background() {
 
   // Reduce animation complexity on mobile
   const animationConfig = isMobile
-    ? { duration: 12, ease: "linear" }
-    : { duration: 8, ease: "easeInOut" };
+    ? { duration: 12, ease: "linear" as const }
+    : { duration: 8, ease: easeInOut };
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -81,6 +82,7 @@ export default function Background() {
             duration: 12,
             repeat: Infinity,
             repeatType: "reverse",
+            ease: "linear",
           }}
           style={{ willChange: 'transform' }}
         />

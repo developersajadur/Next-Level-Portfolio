@@ -11,26 +11,30 @@ interface TechItem {
   level: "Beginner" | "Intermediate" | "Expert";
   category: string;
   description: string;
-  yearsUsed?: number;
 }
 
 const techStackData: Record<string, TechItem[]> = {
   "Backend": [
+        {
+      name: "TypeScript",
+      icon: "devicon:typescript",
+      level: "Expert",
+      category: "Frontend",
+      description: "Type-safe JavaScript for scalable applications",
+    },
     {
+      name: "Golang",
+      icon: "devicon:go",
+      level: "Expert",
+      category: "Backend",
+      description: "Statically typed language for high-performance services",
+    },
+        {
       name: "Node.js",
       icon: "devicon:nodejs",
       level: "Expert",
       category: "Backend",
       description: "JavaScript runtime for server-side applications",
-      yearsUsed: 4
-    },
-    {
-      name: "Python",
-      icon: "devicon:python",
-      level: "Expert",
-      category: "Backend",
-      description: "Versatile language for backend and data science",
-      yearsUsed: 5
     },
     {
       name: "Express",
@@ -38,23 +42,20 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Backend",
       description: "Fast, minimalist web framework for Node.js",
-      yearsUsed: 3
     },
-    {
-      name: "Django",
-      icon: "material-icon-theme:django",
+    // {
+    //   name: "GraphQL",
+    //   icon: "logos:graphql",
+    //   level: "Intermediate",
+    //   category: "Backend",
+    //   description: "Query language for APIs",
+    // },
+        {
+      name: "RabbitMQ",
+      icon: "devicon:rabbitmq",
       level: "Intermediate",
       category: "Backend",
-      description: "High-level Python web framework",
-      yearsUsed: 2
-    },
-    {
-      name: "GraphQL",
-      icon: "logos:graphql",
-      level: "Intermediate",
-      category: "Backend",
-      description: "Query language for APIs",
-      yearsUsed: 2
+      description: "Message broker for asynchronous communication",
     },
     {
       name: "Socket.io",
@@ -62,7 +63,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "Backend",
       description: "Real-time bidirectional event-based communication",
-      yearsUsed: 2
     },
   ],
   "Frontend": [
@@ -72,7 +72,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Building modern, interactive user interfaces",
-      yearsUsed: 4
     },
     {
       name: "Next.js",
@@ -80,7 +79,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Full-stack React framework for production apps",
-      yearsUsed: 3
     },
     {
       name: "TypeScript",
@@ -88,7 +86,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Type-safe JavaScript for scalable applications",
-      yearsUsed: 4
     },
     {
       name: "JavaScript",
@@ -96,7 +93,13 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Core language for web development",
-      yearsUsed: 5
+    },
+        {
+      name: "Redux",
+      icon: "devicon:redux",
+      level: "Expert",
+      category: "Frontend",
+      description: "State management for JavaScript apps",
     },
     {
       name: "Tailwind CSS",
@@ -104,16 +107,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Utility-first CSS framework for rapid UI development",
-      yearsUsed: 3
-    },
-    {
-      name: "Flutter",
-      icon: "devicon:flutter",
-      level: "Intermediate",
-      category: "Frontend",
-      description: "Cross-platform mobile app development",
-      yearsUsed: 2
-    },
+    }
   ],
   "Database": [
     {
@@ -122,7 +116,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Database",
       description: "Advanced open-source relational database",
-      yearsUsed: 3
     },
     {
       name: "MongoDB",
@@ -130,7 +123,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Database",
       description: "NoSQL document database",
-      yearsUsed: 3
     },
     {
       name: "MySQL",
@@ -138,7 +130,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "Database",
       description: "Popular open-source relational database",
-      yearsUsed: 3
     },
     {
       name: "Redis",
@@ -146,7 +137,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "Database",
       description: "In-memory data structure store",
-      yearsUsed: 2
     },
     {
       name: "Prisma",
@@ -154,7 +144,13 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Database",
       description: "Next-generation ORM for Node.js and TypeScript",
-      yearsUsed: 2
+    },
+        {
+      name: "Mongoose",
+      icon: "skill-icons:prisma",
+      level: "Expert",
+      category: "Database",
+      description: "MongoDB object modeling for Node.js",
     },
   ],
   "Cloud & DevOps": [
@@ -164,23 +160,20 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "Cloud & DevOps",
       description: "Amazon Web Services cloud platform",
-      yearsUsed: 2
     },
-    {
-      name: "GCP",
-      icon: "skill-icons:gcp-light",
-      level: "Intermediate",
-      category: "Cloud & DevOps",
-      description: "Google Cloud Platform services",
-      yearsUsed: 2
-    },
-    {
+        {
       name: "Firebase",
       icon: "vscode-icons:file-type-firebase",
-      level: "Expert",
+      level: "Intermediate",
       category: "Cloud & DevOps",
       description: "Google's app development platform",
-      yearsUsed: 3
+    },
+    {
+      name: "Supabase",
+      icon: "skill-icons:supabase-dark",
+      level: "Intermediate",
+      category: "Cloud & DevOps",
+      description: "Open-source Firebase alternative",
     },
     {
       name: "Docker",
@@ -188,7 +181,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "Cloud & DevOps",
       description: "Containerization platform",
-      yearsUsed: 2
     },
     {
       name: "Git",
@@ -196,7 +188,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Cloud & DevOps",
       description: "Version control system",
-      yearsUsed: 5
     },
   ],
   "AI & Integration": [
@@ -206,7 +197,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "AI & Integration",
       description: "AI-powered applications and chatbots",
-      yearsUsed: 2
     },
     {
       name: "LangChain",
@@ -214,7 +204,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "AI & Integration",
       description: "Framework for developing LLM applications",
-      yearsUsed: 1
     },
     {
       name: "Vercel AI SDK",
@@ -222,7 +211,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "AI & Integration",
       description: "Building AI-powered streaming UIs",
-      yearsUsed: 1
     },
     {
       name: "Stripe",
@@ -230,7 +218,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "AI & Integration",
       description: "Payment processing integration",
-      yearsUsed: 2
     },
     {
       // vector database
@@ -239,7 +226,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "AI & Integration",
       description: "Vector database for storing and querying embeddings",
-      yearsUsed: 1
     }
   ],
 };
@@ -364,11 +350,11 @@ function TechCard({
     }
   };
 
-  const getExperienceColor = (years: number) => {
-    if (years >= 4) return "text-emerald-600 dark:text-emerald-400";
-    if (years >= 2) return "text-blue-600 dark:text-blue-400";
-    return "text-amber-600 dark:text-amber-400";
-  };
+  // const getExperienceColor = (years: number) => {
+  //   if (years >= 4) return "text-emerald-600 dark:text-emerald-400";
+  //   if (years >= 2) return "text-blue-600 dark:text-blue-400";
+  //   return "text-amber-600 dark:text-amber-400";
+  // };
 
   return (
     <motion.div
@@ -436,7 +422,7 @@ function TechCard({
             </div>
 
             {/* Experience Years with Enhanced Styling */}
-            {tech.yearsUsed && (
+            {/* {tech.yearsUsed && (
               <div className="text-center">
                 <div className="inline-flex items-center gap-1">
                   <div className={`w-1 h-1 rounded-full ${getExperienceColor(tech.yearsUsed).replace('text-', 'bg-')}`} />
@@ -445,7 +431,7 @@ function TechCard({
                   </span>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Subtle Mesh Pattern Overlay */}
